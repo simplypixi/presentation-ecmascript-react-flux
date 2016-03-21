@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h3>ECMAScript 6, ReactJS i architektura Flux</h3>
+					<p>
+						<small>Created by <a href="http://simplypixi.github.com">Mariusz Wójcik</a></small>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>JavaScript</h2>
+						<ul>
+							<li>05.1995</li>
+							<li>Brendan Eich, Netscape, Mozilla</li>
+							<li>10 dni</li>
+							<li>wieloplatformowy</li>
+							<li>zorientowany obiektowo, funkcyjny, o dynamicznym typowaniu</li>
+							<li>warstwa kliencka</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Java... serio?</h2>
+						<ol>
+							<li class="fragment">05.1995, Mocha</li>
+							<li class="fragment">09.1995, LiveScript</li>
+							<li class="fragment">12.1995, JavaScript</li>
+						</ol>
+						<aside class="notes">
+							Java była bardzo popularna, więc nazwa Javascript była chwytem marketingowym. Do grudnia czekali na pozwolenie na użycie słowa Java, od firmy Sun.
+						</aside>
+					</section>
+					<section>
+						<h2>JavaScript dzisiaj</h2>
+						<ol>
+							<li class="fragment">zastosowania serwerowe (Node.js)</li>
+							<li class="fragment">natywne aplikacje mobilne</li>
+							<li class="fragment">niezliczona liczba frameworków i bibliotek</li>
+							<li class="fragment">programowanie dronów</li>
+						</ol>
+						<aside class="notes">
+							Java była bardzo popularna, więc nazwa Javascript była chwytem marketingowym. Do grudnia czekali na pozwolenie na użycie słowa Java, od firmy Sun.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<h2>ECMAScript (ES)</h2>
+					<ul>
+						<li>1996-1997, ECMA podjęła się standaryzacji JavaScript</li>
+						<li>ECMAScript - standard języka skryptowego</li>
+						<li>JavaScript - najpopularniejsza implementacja ECMAScript</li>
+					</ul>
+					<aside class="notes">
+						ECMA - organizacja non-profit ustanawiająca standardy
+					</aside>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<h2>ES, a JS</h2>
+					<section>
+						<ul>
+							<li class="fragment">aktualnie używany JS jest oparty o ES5</li>
+							<li class="fragment">06.2015, ES6</li>
+							<li class="fragment">ES jest transpilowany do JS</li>
+							<li class="fragment">nowa składnia</li>
+							<li class="fragment">zakres zmiennych</li>
+							<li class="fragment">Promises</li>
+							<li class="fragment">moduły</li>
+						</ul>
+					</section>
+					<section>
+						<pre><code contenteditable style="font-size: 15px; padding-left: 20px;">
+//ES5
+var square = function(x){ return x * x };
+var add = function(a, b){ return a + b };
+
+console.log(square(5));
+console.log(add(3, 4));
+
+//ES6
+let square = x => x * x;
+let add = (a, b) => a + b;
+
+console.log(square(5));
+console.log(add(3, 4));
+						</code></pre>
+					</section>
+					<aside class="notes">
+						ES6 musi być transpilowany, ponieważ współczesne przeglądarki nie interpretują w pełni tego standardu.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Czym jest React?</h2>
+					<ul>
+						<li class="fragment">biblioteka JS (!)</li>
+						<li class="fragment">2011</li>
+						<li class="fragment">'V' w MVC</li>
+						<li class="fragment">Jordan Walke (Facebook)</li>
+						<li class="fragment">Virtual DOM</li>
+						<li class="fragment">JSX</li>
+						<li class="fragment">Component</li>
+						<li class="fragment">wieloplatformowy</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Component w JSX</h2>
+<pre><code>
+
+</code></pre>
+				</section>
+				<section>
+					<h2>Czym jest Flux?</h2>
+					<ul>
+						<li class="fragment">nie jest frameworkiem</li>
+						<li class="fragment">nie jest biblioteką</li>
+						<li class="fragment">architektura pracy z React</li>
+						<li class="fragment">uzupełnia React i koncepcję jednokierunkowego przepływu danych</li>
+						<li class="fragment">Store</li>
+						<li class="fragment">Action</li>
+						<li class="fragment">Dispatcher</li>
+						<li class="fragment">wieloplatformowy</li>
+					</ul>
+					<aside class="notes">
+						Java była bardzo popularna, więc nazwa Javascript była chwytem marketingowym. Do grudnia czekali na pozwolenie na użycie słowa Java, od firmy Sun.
+					</aside>
+				</section>
+				<section>
+					<h2>Data flow</h2>
+					<img src="data-flow.png" alt="http://facebook.github.io/flux/docs/overview.html"/>
+					<p><small>http://facebook.github.io/flux/docs/overview.html</small></p>
+				</section>
+				<section>
+					<h1>Pytania?</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

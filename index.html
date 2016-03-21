@@ -142,7 +142,19 @@ console.log(add(3, 4));
 				<section>
 					<h2>Component w JSX</h2>
 <pre><code>
-
+var CommentBox = React.createClass({displayName: 'CommentBox',
+  render: function() {
+    return (
+      React.createElement('div', {className: "commentBox"},
+        "Hello, world! I am a CommentBox."
+      )
+    );
+  }
+});
+ReactDOM.render(
+  React.createElement(CommentBox, null),
+  document.getElementById('content')
+);
 </code></pre>
 				</section>
 				<section>
@@ -155,9 +167,14 @@ console.log(add(3, 4));
 						<li class="fragment">Store</li>
 						<li class="fragment">Action</li>
 						<li class="fragment">Dispatcher</li>
+						<li class="fragment">View</li>
 						<li class="fragment">wieloplatformowy</li>
 					</ul>
 					<aside class="notes">
+						Stores - zawierają aktualny stan i logikę aplikacji. Mogą się kojarzyć z modelem z MVC, jednak w przeciwieństwie do niego mogą charakteryzować cokolwiek, a nie tylko pojedynczy obiekt.
+						Actions - proste obiekty, określone typem i danymi. Wysyłanie do store'ów, w których zostały zarejestrowane.
+						Dispatchers - hub, służy do wiązania konkretnych akcji z zadanymi store'ami.
+						View - nasłuchuje na zmiany zgłaszane przez store i gdy zajdą ponownie renderuje konkretne coponenety. Moze dodawać również nowe akcje do dispatchera. (REACT)
 						Java była bardzo popularna, więc nazwa Javascript była chwytem marketingowym. Do grudnia czekali na pozwolenie na użycie słowa Java, od firmy Sun.
 					</aside>
 				</section>

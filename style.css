@@ -1,0 +1,8 @@
+.reveal section h3 {
+	line-height: 70px;
+}
+
+.reveal h3, .reveal p, .reveal ul, .reveal h2, .reveal h4, .reveal h1 {
+	font-family: 'Roboto' !important;
+	font-weight: 300;
+}

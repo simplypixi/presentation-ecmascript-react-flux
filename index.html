@@ -17,6 +17,8 @@
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,400italic,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="./style.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
@@ -212,7 +214,6 @@ ReactDOM.render(
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes-server/client.js', async: true }
 				]
 			});
 
